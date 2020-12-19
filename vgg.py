@@ -8,7 +8,6 @@ def vgg_22():
 def vgg_54():
     return _vgg(20)
 
-
 def _vgg(output_layer):
     vgg = VGG19(input_shape=(None, None, 3), include_top=False)
     return Model(vgg.input, vgg.layers[output_layer].output)

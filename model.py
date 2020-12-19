@@ -10,6 +10,7 @@ import tensorflow as tf
 #Please note that not all of the implementation below is our own,
 #some code has been borrowed with acknowledgement
 
+
 #Helper Functions
 def GAN_img(model, x):
     #Passes single img x through the model

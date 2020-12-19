@@ -1,0 +1,11 @@
+This folder will contain the output of the generator model
+
+To retest the model, please delete the contents of this folder (model_output)
+
+It will save the images in the format:
+
+#_cropped_lr.png
+#_cropped_sr.png
+
+where lr stands for the low resolution image
+and sr stands for the output of the super resolution implementation (4x LR)

@@ -47,16 +47,9 @@ def interpolate(image, factor):
                 final[i][j][1] = final[i-1][j][1] + incrementg
                 final[i][j][2] = final[i-1][j][2] + incrementb
 
-    cv2.imwrite("camera_enhance.jpg", final)
-    plot_figure(final, "final output")
-    print(final.shape)
-    
-image_1 = cv2.imread('camera.jpg')[...,::-1]
-image_1 = cv2.cvtColor(image_1,cv2.COLOR_BGR2RGB)
-print(image_1.shape)
-plot_figure(image_1, "nature")
-interpolate(image_1, 5)
 
+def bicubic_interpolate(image, factor):
+	return cv2.resize(image, (image.shape[1] * factor, image.shape[0] * factor), interpolation = cv2.INTER_CUBIC)
 
 # img_interp.py
 import os
